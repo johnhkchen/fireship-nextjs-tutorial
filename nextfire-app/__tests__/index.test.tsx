@@ -11,4 +11,9 @@ describe('Index Page', () => {
         render(<IndexPage />)
         expect(screen.getByText('Hello World.')).toBeVisible()
     })
+
+    it('has a link', () => {
+        render(<IndexPage />)
+        expect(screen.getByRole('link')).toBeVisible()
+    })
 })
