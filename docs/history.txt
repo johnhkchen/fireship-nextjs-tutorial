@@ -1,4 +1,0 @@
-Nov 30, 2021
-    - Started project and tutorial
-    - Indicated dependencies used for this tutorial series
-    - Installed gh CLI tool and logged into my account
