@@ -1,27 +1,15 @@
-# Next.js + Cypress
+# Next.js + Cypress + Jest
 
-This example shows how to configure Cypress to work with Next.js.
-
-## Preview
-
-Preview the example live on [StackBlitz](http://stackblitz.com/):
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-cypress)
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-cypress&project-name=with-cypress&repository-name=with-cypress)
+This is an example of a Next.js app with Cypress and Jest automated testing.
 
 ## How to use
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+`npm run dev` - start a development server
 
-```bash
-npx create-next-app --example with-cypress with-cypress-app
-# or
-yarn create next-app --example with-cypress with-cypress-app
-```
+`npm run build` - create an optimized production build
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+`npm run start` - run the optimized production server after it's built
+
+`npm run test` - run Jest unit testing suite
+
+`npm run cypress` - run headless Cypress integration testing suite
