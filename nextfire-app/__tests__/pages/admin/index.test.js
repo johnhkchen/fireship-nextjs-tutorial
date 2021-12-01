@@ -6,7 +6,7 @@
  import { render, screen } from '@testing-library/react'
  import AdminPage from '../../../pages/admin'
  
- describe('Enter Page', () => {
+ describe('Admin Page', () => {
      it('exists', () => {
          render(<AdminPage />)
          expect(screen.getByRole('main')).toBeTruthy()

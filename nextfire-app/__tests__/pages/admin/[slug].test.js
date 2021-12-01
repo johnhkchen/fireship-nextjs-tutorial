@@ -6,7 +6,7 @@
  import { render, screen } from '@testing-library/react'
  import AdminSlugPage from '../../../pages/admin/[slug]'
  
- describe('Enter Page', () => {
+ describe('Admin Post Page', () => {
      it('exists', () => {
          render(<AdminSlugPage />)
          expect(screen.getByRole('main')).toBeTruthy()
