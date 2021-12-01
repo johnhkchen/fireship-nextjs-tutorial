@@ -4,11 +4,11 @@
 
  import React from 'react'
  import { render, screen } from '@testing-library/react'
- import UserPage from '../../pages/[username]'
+ import AdminPage from '../../../pages/admin'
  
  describe('Enter Page', () => {
      it('exists', () => {
-         render(<UserPage />)
+         render(<AdminPage />)
          expect(screen.getByRole('main')).toBeTruthy()
      })
  })

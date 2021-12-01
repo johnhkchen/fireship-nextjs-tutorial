@@ -4,7 +4,7 @@
 
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import IndexPage from '../pages/index'
+import IndexPage from '../../pages/index'
 
 describe('Index Page', () => {
     it('has some text', () => {
