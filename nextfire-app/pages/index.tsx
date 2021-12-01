@@ -1,3 +1,4 @@
+import Loader from '../components/Loader'
 import Link from 'next/link'
 
 export default function IndexPage() {
@@ -7,6 +8,7 @@ export default function IndexPage() {
       <Link href="/about">
         <a>About</a>
       </Link>
+      <Loader show/>
     </div>
   )
 }

@@ -16,4 +16,9 @@ describe('Index Page', () => {
         render(<IndexPage />)
         expect(screen.getByRole('link')).toBeVisible()
     })
+
+    it('has a loader', () => {
+        const { container } = render(<IndexPage />)
+        expect(container.getElementsByClassName('loader')).not.toHaveLength(0)
+    })
 })
