@@ -14,6 +14,11 @@
  
      it('has a link', () => {
          render(<AboutPage />)
-         expect(screen.getByRole('link')).toBeVisible()
+         expect(screen.getAllByRole('link')[0]).toBeVisible()
      })
+
+    it('has a navbar', () => {
+        const { container } = render(<AboutPage />)
+        expect(container.getElementsByClassName('navbar').length).toBe(1)
+    })
  })

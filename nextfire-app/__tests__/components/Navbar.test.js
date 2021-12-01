@@ -17,24 +17,21 @@
         expect(screen.getByRole('list')).toBeTruthy()
     })
 
-    it('contains two list items (1/2)', () => {
+    it('contains a list item', () => {
         render(<Navbar />);
         expect(screen.getAllByRole('listitem')[0]).toBeTruthy()
     })
 
-    it('contains two list items (2/2)', () => {
-        render(<Navbar />);
-        expect(screen.getAllByRole('listitem')[1]).toBeTruthy()
-    })
-
     it('contains a link to the homepage', () => {
         render(<Navbar />);
-        expect(screen.getByRole('link')).toBeTruthy()
+        const link = screen.getByRole('link')
+        expect(link).toHaveAttribute('href', '/')
     })
 
-    it('has a button', () => {
+    it('has a button that says GO', () => {
         render(<Navbar />);
-        expect(screen.getByRole('button')).toBeTruthy()
+        const button = screen.getByRole('button')
+        expect(button.innerHTML).toBe('GO')
     })
 
  })

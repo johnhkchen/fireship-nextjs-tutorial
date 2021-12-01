@@ -12,13 +12,18 @@ describe('Index Page', () => {
         expect(screen.getByText('Hello World.')).toBeVisible()
     })
 
-    it('has a link', () => {
+    it('has a link to the about page', () => {
         render(<IndexPage />)
-        expect(screen.getByRole('link')).toBeVisible()
+        expect(screen.getAllByRole('link')[0]).toBeVisible()
     })
 
     it('has a loader', () => {
         const { container } = render(<IndexPage />)
         expect(container.getElementsByClassName('loader')).not.toHaveLength(0)
+    })
+
+    it('has a navbar', () => {
+        const { container } = render(<IndexPage />)
+        expect(container.getElementsByClassName('navbar')).not.toHaveLength(0)
     })
 })

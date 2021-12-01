@@ -2,15 +2,12 @@ import Link from 'next/link'
 
 export default function Navbar() {
     return (
-        <nav>
+        <nav className='navbar'>
             <ul>
                 <li>
                     <Link href='/'>
-                        <a>Homepage</a>
+                        <a><button>GO</button></a>
                     </Link>
-                </li>
-                <li>
-                    <button>GO</button>
                 </li>
             </ul>
         </nav>
