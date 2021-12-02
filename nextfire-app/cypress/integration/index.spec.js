@@ -15,13 +15,4 @@ describe('Home Page', () => {
     cy.url().should('include', '/about')
   })
 
-  it('should stay on the home page when using the GO button', () => {
-    // Start from the index page
-    cy.visit('http://localhost:3000/')
-
-    // Find a button saying "GO" and click it
-    cy.get('button').click()
-
-    cy.url().should('eq', 'http://localhost:3000/')
-  })
 })

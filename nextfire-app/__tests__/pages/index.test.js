@@ -1,9 +1,9 @@
 /**
  * @jest-environment jsdom
  */
-
+import '../../__mocks__/matchMedia.mock'
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { render, fireEvent, screen } from '@testing-library/react'
 import IndexPage from '../../pages/index'
 
 describe('Index Page', () => {
@@ -26,4 +26,25 @@ describe('Index Page', () => {
         const { container } = render(<IndexPage />)
         expect(container.getElementsByClassName('navbar')).not.toHaveLength(0)
     })
+
+    it('has a button which says "GO"', () => {
+        render(<IndexPage />)
+        expect(screen.getByText('GO')).toBeVisible()
+    })
+
+    it('has a ToastButton labeled "Toast Me"', () => {
+        render(<IndexPage />)
+        const toast_button = screen.getByText("Toast Me")
+        expect(toast_button).toBeTruthy()
+    })
+
+    it('creates a toast message saying "hello toast"', async () => {
+        render(<IndexPage />)
+        const toast_button = screen.getByText("Toast Me")
+        fireEvent.click(toast_button)
+        const items = await screen.findAllByText("hello toast")
+        expect(items).toHaveLength(1)
+    })
+
+    
 })
