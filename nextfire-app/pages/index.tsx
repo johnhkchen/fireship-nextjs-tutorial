@@ -18,6 +18,9 @@ export default function IndexPage() {
       <Loader show />
       <ToastButton />
       <Toaster />
+      <Link href="/login">
+        <a>Log In</a>
+      </Link>
     </main>
   )
 }

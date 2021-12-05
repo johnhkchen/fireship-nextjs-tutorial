@@ -46,5 +46,8 @@ describe('Index Page', () => {
         expect(items).toHaveLength(1)
     })
 
-    
+    it('has a "Log In" button', () => {
+        render(<IndexPage />)
+        expect(screen.getByText('Log In')).toBeVisible()
+    })
 })
